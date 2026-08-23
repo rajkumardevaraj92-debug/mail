@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RajMail</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            📧 RajMail
+        </div>
+
+        <button class="compose-btn" onclick="showCompose()">
+            ✏️ Compose
+        </button>
+
+        <nav>
+
+            <button onclick="showInbox()">
+                📥 Inbox
+            </button>
+
+            <button onclick="showSent()">
+                📤 Sent
+            </button>
+
+            <button onclick="showCompose()">
+                📝 Draft
+            </button>
+
+        </nav>
+
+        <div class="user-box">
+
+            <img
+                src="https://i.pravatar.cc/100?img=12"
+                alt="User">
+
+            <div>
+                <strong>Raj Kumar</strong>
+                <small>raj@example.com</small>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Area -->
+
+    <main class="main">
+
+        <header class="header">
+
+            <div>
+
+                <h2 id="pageTitle">
+                    Inbox
+                </h2>
+
+                <p>
+                    Welcome to RajMail
+                </p>
+
+            </div>
+
+            <div class="profile">
+
+                <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="profile">
+
+            </div>
+
+        </header>
+
+
+        <!-- Inbox -->
+
+        <section id="inboxSection">
+
+            <div class="toolbar">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search emails..."
+                    onkeyup="searchEmails()">
+
+            </div>
+
+            <div id="emailList">
+
+                <div class="loading">
+                    Loading emails...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Compose -->
+
+        <section
+            id="composeSection"
+            class="compose hidden">
+
+            <h2>✉️ Compose Email</h2>
+
+            <input
+                type="email"
+                id="receiver"
+                placeholder="To">
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Subject">
+
+            <textarea
+                id="message"
+                placeholder="Write your message...">
+            </textarea>
+
+            <div class="compose-buttons">
+
+                <button
+                    class="send-btn"
+                    onclick="sendEmail()">
+                    🚀 Send Email
+                </button>
+
+                <button
+                    class="cancel-btn"
+                    onclick="showInbox()">
+                    Cancel
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
